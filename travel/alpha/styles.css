@@ -213,10 +213,14 @@ input[type="submit"].btn-submit:hover {
 .overlay {
 	position: absolute;
 	background: black;
-	top: 0;
+/*	top: 0; minified the positioning errors, so that it would act responsive.
 	right: 0;
 	bottom: 0;
-	left: 0;
+	left: 0;*/
+/*	margin: 0 auto;*/
+/*	clear: both;*/
+	height: 100%;
+	width: 100%;
 	background: -moz-linear-gradient(top, rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.1) 70%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(top, rgba(0,0,0,05) 0%,rgba(0,0,0,0.1) 70%); /* Chrome10-25,Safari5.1-6 */
 	background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.1) 70%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
