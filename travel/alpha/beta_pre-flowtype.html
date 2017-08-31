@@ -37,8 +37,8 @@
   @import 'https://fonts.googleapis.com/css?family=Cutive';
 
 $font-family-base: 'Cutive', serif;;
-$font-size-root: 8px;
-$font-size-base: 1rem;
+/*$font-size-root: 8px;
+$font-size-base: 1rem;*/
 /*$line-height-base: 1.4;*/
 
 $color-black: #222;
@@ -107,12 +107,21 @@ p {
 
 .scene {
 /*  padding: $spacing-large $spacing;*/
-  max-width: 800px;
-  margin: 0 auto;
+  /*max-width: 800px;
+  margin: 0 auto;*/ 
+
+/*   margin: 0 auto;
+    clear: both;*/
+    height: 30%;
+    width: 35%;
+/*    padding: 30px 20px 30px 20px;*/
+    position: relative;
 }
 
 .actor {
-  font-size: 2.8rem;
+  height: 30%;
+  width: 35%;
+/*  font-size: 2.8rem;*/
   display: flex;
   margin-bottom: 10%;
 
@@ -159,7 +168,8 @@ p {
 	<div class="container ">
 		<main class="scene">
 		<!-- <h1> Beautiful Scotland  </h1> -->
-       
+  
+  <script src="jquery.fittext.js"></script>
 
         <div class="actor">
         <div class="actor__prefix"></div>
@@ -184,9 +194,9 @@ p {
       </ul>
     </nav>
     <br>
-		<div class="jumbotron">
-		 <h1><span id="vader"></span></h1>
-		<h1><span id="luke"></span></h1>
+		<div class="jumbotron fittext3">
+		 <h1><span class="fittext2" id="vader"></span></h1>
+		<h1><span class="fittext1" id="luke"></span></h1>
 		</div>
 		<div class="btn btn-default"> 
 			<a href="discover.html"><b><span id="discover"></span></b></a>
@@ -202,6 +212,11 @@ p {
 		</div></div>
    
 	</header>
+  <script type="text/javascript">
+    $("#fittext1").fitText();
+    $("#fittext2").fitText(1.2);
+    $("#fittext3").fitText(1.1, { minFontSize: '50px', maxFontSize: '75px' });
+  </script>
 
 <!-- <footer>
 

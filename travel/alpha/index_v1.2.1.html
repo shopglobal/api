@@ -13,6 +13,7 @@
     <link href="styles/ticker-style.css" rel="stylesheet" type="text/css" />
   <script src="includes/jquery.ticker.js" type="text/javascript"></script>
   <script src="includes/site.js" type="text/javascript"></script>
+  <script src="flowtype.js" type="text/javascript"></script>
 </head>
 <body>
 <!--   <h1>jQuery News Ticker</h1> -->
@@ -160,6 +161,15 @@ p {
 .container {
     background-color:transparent !important; 
 }
+/*body {
+ font-size: 18px;
+}
+h1,h2,h3,h4,h5,h6,p {
+ line-height: 1.45;
+}
+h1 { font-size: 4em; }
+h2 { font-size: 3em; }
+h3 { etc...*/
 </style>
 
  <body>
@@ -194,9 +204,9 @@ p {
       </ul>
     </nav>
     <br>
-		<div class="jumbotron fittext3">
-		 <h1><span class="fittext2" id="vader"></span></h1>
-		<h1><span class="fittext1" id="luke"></span></h1>
+		<div class="jumbotron">
+		 <h1 class="fit"><span id="vader"></span></h1>
+		<h1 class="fit"><span id="luke"></span></h1>
 		</div>
 		<div class="btn btn-default"> 
 			<a href="discover.html"><b><span id="discover"></span></b></a>
@@ -212,16 +222,25 @@ p {
 		</div></div>
    
 	</header>
-  <script type="text/javascript">
-    $("#fittext1").fitText();
-    $("#fittext2").fitText(1.2);
-    $("#fittext3").fitText(1.1, { minFontSize: '50px', maxFontSize: '75px' });
-  </script>
+<!--   <script type="text/javascript">
+    $(".fittext1").fitText();
+    $(".fittext2").fitText(1.2);
+    $(".fittext3").fitText(1.1, { minFontSize: '50px', maxFontSize: '75px' });
+  </script> -->
 
 <!-- <footer>
 
 </footer> -->
 	<script type="text/javascript">
+
+  // $('body').flowtype();
+  $('.fit').flowtype({
+ minimum   : 500,
+ maximum   : 1200,
+ minFont   : 6,
+ maxFont   : 40,
+ fontRatio : 30
+});
   /*
  * TheaterJS, a typing effect mimicking human behavior.
  *
