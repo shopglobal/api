@@ -1,93 +1,16 @@
-Development of actual combat resources integration [! [Awesome] (https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)] (https://github.com/lyfyeaj/awesome-resources)
+Development resources (https://github.com/lyfyeaj/awesome-resources)
 =====================
-
-
 
 >> As with open source projects, this document will be out of date if it is not care and maintenance, so it is no longer of reference value, so hope that all the people you like will be able to work together. Add new content! *
 
-do you like it? Or useful to you? Then star about it ^ _ ^
+do you like it? Or useful to you? Then star it ^ _ ^
 
 ## contribution style
 
 + Fork this project
 + Please do not add content directly to `README.md`
 + All the documents are placed in `docs`, according to the contents of the corresponding file and add
-+ If it is a Mac or a Linux user, run ./build.sh before committing to generate the `README.md` file
-Save and submit
 + Create a new Pull Request
-
-## table of Contents
-
-<! - START doctoc generated TOC please keep comment here to allow auto update ->
-<! - DO NOT EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE ->
-
-
-- [Web front end] (# web-% E5% 89% 8D% E7% AB% AF)
-    - [Javascript] (# javascript)
-        - [Polyfills] (# polyfills)
-        - [HTML5 related] (# html5-% E7% 9B% B8% E5% 85% B3)
-        - [React] (# react)
-    - [CSS] (# css)
-    - [ICON] (# icon)
-- [Web backend] (# web-% E5% 90% 8E% E7% AB% AF)
-    - [Ruby] (# ruby)
-    - [Python] (# python)
-    - [Node.js] (# nodejs)
-        - [Express] (# express)
-    - [Erlang] (# erlang)
-    - [java] (# java)
-    - [C / C ++] (# cc)
-    - [Go] (# go)
-    - [Lua] (# lua)
-- [IOS or OSX] (# ios-% E6% 88% 96-osx)
-- [Android] (# android)
-- [code efficiency] (#% E4% BB% A3% E7% A0% 81% E6% 95% 88% E7% 8E% 87)
-    - [CoffeeScript] (# coffeescript)
-    - [TypeScript] (# typescript)
-    - [Sublime Text] (# sublime-text)
-- [cloud computing] (#% E4% BA% 91% E8% AE% A1% E7% AE% 97)
-    - [Docker] (# docker)
-    - [OS] (# os)
-- [open source products (forums, online education, project management, etc.)] (#% E5% BC% 80% E6% BA% 90% E4% BA% A7% E5% 93% 81% E8% AE% BA% E5% 9D% 9B% E3% 80% 81% E5% 9C% A8% E7% BA% BF% E6% 95% 99% E8% 82% B2% E3% 80% 81% E9% A1% B9% E7% 9B% AE% E7% AE% A1% E7% 90% 86% E7% AD% 89)
-- [Code Specification & Design Mode] (#% E4% BB% A3% E7% A0% 81% E8% A7% 84% E8% 8C% 83 &% E8% AE% BE% E8% AE% A1% E6% A8 % A1% E5% BC% 8F)
-    - [Ruby] (# ruby-1)
-        - [Rails] (# rails)
-    - [Javascript] (# javascript-1)
-        - [AngularJS] (# angularjs)
-    - [Java] (# java-1)
-        - [Android] (# android-1)
-    - [Bash] (# bash)
-    - [Objective-C] (# objective-c)
-        - [IOS] (# ios)
-    - [Swift] (# swift)
-    - [Design] (# design)
-- [database] (#% E6% 95% B0% E6% 8D% AE% E5% BA% 93)
-- [blog / website] (#% E5% 8D% 9A% E5% AE% A2 -% E7% BD% 91% E7% AB% 99)
-    - [design] (#% E8% AE% BE% E8% AE% A1)
-    - [technology] (#% E6% 8A% 80% E6% 9C% AF)
-- [Book / Reading / Learning] (#% E4% B9% A6% E7% B1% 8D -% E9% 98% 85% E8% AF% BB -% E5% AD% A6% E4% B9% A0 )
-    - [Awesome series] (# awesome-% E7% B3% BB% E5% 88% 97)
-    - [front end] (#% E5% 89% 8D% E7% AB% AF)
-        - [web] (# web)
-        - [React] (# react-1)
-        - [IOS] (# ios-1)
-        - [Android] (# android-2)
-    - [backend] (#% E5% 90% 8E% E7% AB% AF)
-        - [Node.js] (# nodejs-1)
-        - [Ruby] (# ruby-2)
-        - [PHP] (# php)
-        - [Go] (# go-1)
-        - [Bash] (# bash-1)
-        - [interface] (#% E6% 8E% A5% E5% 8F% A3)
-    - [algorithm & thesis] (#% E7% AE% 97% E6% B3% 95 - & -% E8% AE% BA% E6% 96% 87)
-    - [other] (#% E5% 85% B6% E4% BB% 96)
-- [Science Online] (#% E7% A7% 91% E5% AD% A6% E4% B8% 8A% E7% BD% 91)
-- [Git related] (# git-% E7% 9B% B8% E5% 85% B3)
-- [other] (#% E5% 85% B6% E4% BB% 96-1)
-- [License] (# license)
-
-<! - END doctoc generated TOC please keep comment here to allow auto update ->
-
 
 ## Web front end
 
