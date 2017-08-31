@@ -39,7 +39,7 @@ footer, header, hgroup, menu, nav, section {
     display:block;
 }
 
-nav ul { list-style:none; }
+nav ul { list-style:none; position: absolute; padding: 5px 5px 5px 5px;}
 
 blockquote, q { quotes:none; }
 

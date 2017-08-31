@@ -118,6 +118,7 @@ p {
     width: 35%;
 /*    padding: 30px 20px 30px 20px;*/
     position: relative;
+    margin: 10% 40% 10% 40%;
 }
 
 .actor {
@@ -125,7 +126,8 @@ p {
   width: 35%;
 /*  font-size: 2.8rem;*/
   display: flex;
-  margin-bottom: 10%;
+  position: relative;
+  
 
   }
 }
@@ -148,7 +150,7 @@ p {
     margin: 0 auto;
     clear: both;
     width: 95%;
-    padding: 30px;
+/*    padding: 30px;*/
     position: relative;
 /*  top: 0; minified the positioning errors, so that it would act responsive.
   right: 0;
@@ -157,9 +159,12 @@ p {
 /*  margin: 0 auto;*/
 /*  clear: both;*/
     height: 100%;
-    width: 100%;
+/*    width: 100%;*/
 }
 .container {
+    height: 30%;
+    width: 100%;
+    position: relative;
     background-color:transparent !important; 
 }
 /*body {
@@ -175,8 +180,19 @@ h3 { etc...*/
 
  <body>
   <header class="main"><canvas class="overlay"></canvas>
+   
 
+  <nav>
+      <ul>
+        <a href="index.html"><li> Home </li></a>
+        <a href="about.html"><li> About </li></a>
+        <a href="index.html"><li class="logo-globe"> <i class="fa fa-globe" aria-hidden="true"></i></li></a>
+        <a href="discover.html"><li> Discover </li></a>
+        <a href="contact.html"><li> Contact </li></a>
+      </ul>
+    </nav>
   <div class="container ">
+
     <main class="scene">
     <!-- <h1> Beautiful Scotland  </h1> -->
   
@@ -195,34 +211,31 @@ h3 { etc...*/
 
         </main>
     <!-- <p> Tagline will be here  </p> -->
-      <nav>
-      <ul>
-        <a href="index.html"><li> Home </li></a>
-        <a href="about.html"><li> About </li></a>
-        <a href="index.html"><li class="logo-globe"> <i class="fa fa-globe" aria-hidden="true"></i></li></a>
-        <a href="discover.html"><li> Discover </li></a>
-        <a href="contact.html"><li> Contact </li></a>
-      </ul>
-    </nav>
+      
     <br>
     <div class="jumbotron">
      <h1 class="fit"><span id="vader"></span></h1>
     <h1 class="fit"><span id="luke"></span></h1>
-    </div>
-    <div class="btn btn-default"> 
+    
+    <div class="btn-default"> 
       <a href="discover.html"><b><span id="discover"></span></b></a>
       <br>
-      <ul id="js-news" class="js-hidden">
+    </div>
+
+  <footer><div class="container-fluid">
+     <ul id="js-news" class="js-hidden">
 <!--     <li class="news-item">jQuery News Ticker now has support for multiple tickers per page!</li>
     <li class="news-item">jQuery News Ticker now has support for right-to-left languages!</li>
     <li class="news-item">jQuery News Ticker now has support for loading content via an RSS feed!</li>
     <li class="news-item">jQuery News Ticker now has an optional fade effect between items!</li>
     <li class="news-item">New updates have been made to jQuery News Ticker! Check below for more details!</li> -->
     <li class="news-item">Further updates to Trip Planner App are coming soon!</li>
-  </ul>  
+  </ul>
+  </footer></div>
     </div></div>
    
   </header>
+
 <!--   <script type="text/javascript">
     $(".fittext1").fitText();
     $(".fittext2").fitText(1.2);
@@ -274,7 +287,7 @@ theater
   .addActor('luke')
   .addActor('discover')
   .addScene('vader:Where would you like to go?', 600)
-  .addScene('discover:<p align="center">' + 'Discover the World, Live and Adventure.' + '' + ' Book your Trip and Visit the Places</p><p> of your Dreams, reignight the fire that is life. Learn new languages, try new foods..</p>', 600)
+  .addScene('discover:<p align="center">' + 'Discover the World, Live and Adventure.' + ' Book your Trip and Visit the Places of your Dreams, reignight the fire that is life. Learn new languages, try new foods..</p>', 600)
   //Book your Trip and the Visit Place' + '</br></br>' 'of your Dreams, reignight the fire that is life. Learn a new language, and try a new food..</p>
   .addScene('luke:Traveling is my dream . . .', 400)
   .addScene('vader:Anywhere in the world. . .', 400)
