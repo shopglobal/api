@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <header><head>
-	<title> </title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
-	<script src="https://use.fontawesome.com/5cecdc69bf.js"></script>
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
- 	<link rel="stylesheet" type="text/css" href="styles.css" />
-	  <title>Travel Site</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+  <script src="https://use.fontawesome.com/5cecdc69bf.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+        <title>Travel Site</title>
   <script src="https://cdn.jsdelivr.net/theaterjs/latest/theater.min.js"></script></head>
-    <link href="styles/ticker-style.css" rel="stylesheet" type="text/css" />
+  <link href="styles/ticker-style.css" rel="stylesheet" type="text/css" />
   <script src="includes/jquery.ticker.js" type="text/javascript"></script>
   <script src="includes/site.js" type="text/javascript"></script>
   <script src="flowtype.js" type="text/javascript"></script>
+  <script src="jquery.fittext.js"></script>
 </head>
 <body>
 <!--   <h1>jQuery News Ticker</h1> -->
   
 
-  <noscript>
+ <!--  <noscript>
     <h2>Latest Flights</h2>
     <ul id="no-js-news">
       <li class="news-item">jQuery News Ticker now has support for multiple tickers per page!</li>
@@ -30,7 +31,7 @@
       <li class="news-item">jQuery News Ticker is now compatible with jQuery 1.3.2! See below for further details and for latest download.</li>
       <li class="news-item">Further updates to jQuery News Ticker are coming soon, come back soon for more details.</li>
     </ul>
-  </noscript>
+  </noscript> -->
   
 </header>
 
@@ -173,13 +174,13 @@ h3 { etc...*/
 </style>
 
  <body>
-	<header class="main"><canvas class="overlay"></canvas>
+  <header class="main"><canvas class="overlay"></canvas>
 
-	<div class="container ">
-		<main class="scene">
-		<!-- <h1> Beautiful Scotland  </h1> -->
+  <div class="container ">
+    <main class="scene">
+    <!-- <h1> Beautiful Scotland  </h1> -->
   
-  <script src="jquery.fittext.js"></script>
+ 
 
         <div class="actor">
         <div class="actor__prefix"></div>
@@ -187,14 +188,14 @@ h3 { etc...*/
         </div>
 
         
-		<div class="actor">
+    <div class="actor">
         <div class="actor__prefix"></div>
         <div class="actor__content"></div>
         </div>
 
         </main>
-		<!-- <p> Tagline will be here  </p> -->
-		  <nav>
+    <!-- <p> Tagline will be here  </p> -->
+      <nav>
       <ul>
         <a href="index.html"><li> Home </li></a>
         <a href="about.html"><li> About </li></a>
@@ -204,12 +205,12 @@ h3 { etc...*/
       </ul>
     </nav>
     <br>
-		<div class="jumbotron">
-		 <h1 class="fit"><span id="vader"></span></h1>
-		<h1 class="fit"><span id="luke"></span></h1>
-		</div>
-		<div class="btn btn-default"> 
-			<a href="discover.html"><b><span id="discover"></span></b></a>
+    <div class="jumbotron">
+     <h1 class="fit"><span id="vader"></span></h1>
+    <h1 class="fit"><span id="luke"></span></h1>
+    </div>
+    <div class="btn btn-default"> 
+      <a href="discover.html"><b><span id="discover"></span></b></a>
       <br>
       <ul id="js-news" class="js-hidden">
 <!--     <li class="news-item">jQuery News Ticker now has support for multiple tickers per page!</li>
@@ -219,9 +220,9 @@ h3 { etc...*/
     <li class="news-item">New updates have been made to jQuery News Ticker! Check below for more details!</li> -->
     <li class="news-item">Further updates to Trip Planner App are coming soon!</li>
   </ul>  
-		</div></div>
+    </div></div>
    
-	</header>
+  </header>
 <!--   <script type="text/javascript">
     $(".fittext1").fitText();
     $(".fittext2").fitText(1.2);
@@ -231,16 +232,10 @@ h3 { etc...*/
 <!-- <footer>
 
 </footer> -->
-	<script type="text/javascript">
+  <script type="text/javascript">
 
   // $('body').flowtype();
-  $('.fit').flowtype({
- minimum   : 500,
- maximum   : 1200,
- minFont   : 6,
- maxFont   : 40,
- fontRatio : 30
-});
+
   /*
  * TheaterJS, a typing effect mimicking human behavior.
  *
@@ -266,6 +261,14 @@ theater
     }
   })
 
+    $('.fit').flowtype({
+ minimum   : 1500,
+ maximum   : 2200,
+ minFont   : 6,
+ maxFont   : 40,
+ fontRatio : 30
+});
+
 theater
   .addActor('vader', { speed: 0.8, accuracy: 0.6 })
   .addActor('luke')
@@ -273,7 +276,7 @@ theater
   .addScene('vader:Where would you like to go?', 600)
   .addScene('discover:<p align="center">' + 'Discover the World, Live and Adventure.' + '' + ' Book your Trip and Visit the Places</p><p> of your Dreams, reignight the fire that is life. Learn new languages, try new foods..</p>', 600)
   //Book your Trip and the Visit Place' + '</br></br>' 'of your Dreams, reignight the fire that is life. Learn a new language, and try a new food..</p>
-  .addScene('luke:What?', 400)
+  .addScene('luke:Traveling is my dream . . .', 400)
   .addScene('vader:Anywhere in the world. . .', 400)
   .addScene('luke: Im', -3, '...', 600, ' listening ', 600)
   .addScene('vader:What if I told you. . .', 400)
