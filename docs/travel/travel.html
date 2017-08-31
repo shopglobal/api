@@ -3,9 +3,20 @@
 
 <head>
   <meta charset="utf-8">  
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script type="text/javascript">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Latest compiled and minified JavaScript -->
+    <!--  java script -->
+
+    <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script><script src="assets/js/app.js"></script>
+    <script type="text/javascript" type="text/javascript">
       //! moment.js
 //! version : 2.18.1
 //! authors : Tim Wood, Iskren Chernev, Moment.js contributors
@@ -4510,7 +4521,7 @@ table.dataTable{width:100%;margin:0 auto;clear:both;border-collapse:separate;bor
       </thead>
       <tbody >
         <tr class="tr" id="results">
-          <!-- Example Movie 1 -->
+          <!-- Example Travel 1 -->
           <td class="td"><span id="origin" class="tablesorter"></span></td>
           <td class="td"><span id="destination" class="origin tablesorter" value="0"></span></td>
           <td class="td"><span id="departure_date" class="tablesorter"></span></td>
@@ -4520,14 +4531,14 @@ table.dataTable{width:100%;margin:0 auto;clear:both;border-collapse:separate;bor
 
         </tr>
         <tr class="tr">
-          <!-- Example Movie 2 -->
+          <!-- Example Travel 2 -->
 <!--           <td></td>
           <td></td>
           <td></td> -->
           // 
         </tr>
         <tr class="tr">
-          <!-- Example Movie 3 -->
+          <!-- Example Travel 3 -->
  <!--          <td></td>
           <td></td>
           <td></td> -->
@@ -4535,6 +4546,8 @@ table.dataTable{width:100%;margin:0 auto;clear:both;border-collapse:separate;bor
       </tbody>
     </table>
   </div>
+
+   
 
 </body>
 
@@ -4550,13 +4563,7 @@ table.dataTable{width:100%;margin:0 auto;clear:both;border-collapse:separate;bor
 //     $('#thead').dataTable( {
 //     select: true
 // } );
-    // var today = moment().format('YYYY-MM-DD');
-    // var date = today;
-    // need if today is after P.M, must search tomorrow.
-
-    
-    var date = moment().add(1, 'days').format('YYYY-MM-DD'); 
-
+ var date = moment().format('YYYY-MM-DD');
      $.ajax({
       url: "https://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?origin=mia&departure_date=" + date + "&apikey=p8YSKZZKV403qdiG3zvO2jbw3pnEdPZY",
       // working on a link which will pick up with Form results and insert at the right part of the API string ;)
@@ -4564,7 +4571,6 @@ table.dataTable{width:100%;margin:0 auto;clear:both;border-collapse:separate;bor
       method: "GET"
 
       }).done(function(data) {
-
 // creating an array with the data from the API
       Array['#origin'] = data['origin'];
       // Array['#outbound'] = data['outbound'];
@@ -4580,6 +4586,7 @@ table.dataTable{width:100%;margin:0 auto;clear:both;border-collapse:separate;bor
       Array['#destination'] = data['destination'];
       console.log('origin is ' + data.origin);
       console.log(moment().format('YYYY-MM-DD'));
+
 
       // moment().format('YYYY-MM-DD');
       // console.log(moment().date(Number));
@@ -4739,7 +4746,6 @@ table.dataTable{width:100%;margin:0 auto;clear:both;border-collapse:separate;bor
       $('#price').append("<br> $" + data.results[9].price);
       $('#price').append("<br> $" + data.results[10].price);
       $('#destination').append("<br>" + data.results[0].destination);
-
     $('#destination').append("<br>" + data.results[1].destination);
     $('#destination').append("<br>" + data.results[2].destination);
     $('#destination').append("<br>" + data.results[3].destination);
