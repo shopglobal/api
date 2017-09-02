@@ -1,13 +1,114 @@
 <!DOCTYPE html>
-<header>
-	<title> Discover </title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" type="text/css" href="styles.css" />
-	<link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
-	<script src="https://use.fontawesome.com/5cecdc69bf.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<header><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway" rel="stylesheet">
+  <script src="https://use.fontawesome.com/5cecdc69bf.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="styles.css" />
+        <title>Discover</title>
+  <script src="https://cdn.jsdelivr.net/theaterjs/latest/theater.min.js"></script></head>
+  <link href="styles/ticker-style.css" rel="stylesheet" type="text/css" />
+  <script src="includes/jquery.ticker.js" type="text/javascript"></script>
+  <script src="includes/site.js" type="text/javascript"></script>
+  <script src="flowtype.js" type="text/javascript"></script>
+  <script src="jquery.fittext.js"></script>
+    <!-- jQuery -->
+<!--     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
+    <!-- Moment.js -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <!-- Firebase Reference -->
+    <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script>
+
+    <!-- <link rel="stylesheet" type="text/css" href="styles.css" /> -->
 </header>
+
+<style>
+a {
+  color: #ffffff;
+  text-decoration: none;
+/*  border-bottom: 1px solid;*/
+
+}
+a:hover {
+  color: #000000; {
+    box-shadow: inset 0 -8px 0 $color-red;
+  }
+}
+
+p {
+  opacity: .6;
+  margin: 0 0 .6rem 0;
+  padding: 4px;
+  transition: opacity 300ms ease-out;
+
+  p:hover {
+    opacity: 1;
+  }
+}
+
+.scene {
+/*  padding: $spacing-large $spacing;*/
+  /*max-width: 800px;
+  margin: 0 auto;*/ 
+
+/*   margin: 0 auto;
+    clear: both;*/
+    height: 30%;
+    width: 35%;
+/*    padding: 30px 20px 30px 20px;*/
+    position: relative;
+    margin: 10% 40% 10% 40%;
+}
+
+.actor {
+  height: 30%;
+  width: 35%;
+/*  font-size: 2.8rem;*/
+  display: flex;
+  position: relative;
+  
+
+  }
+}
+
+.actor__content {
+  flex-grow: 1;
+}
+
+@keyframes blink {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.actor__content--typing::after {
+/*  content: '|';*/
+  animation: blink 500ms infinite;
+}
+.jumbotron {
+    background-color:transparent !important; 
+    margin: 0 auto;
+    clear: both;
+    width: 95%;
+/*    padding: 30px;*/
+    position: relative;
+/*  top: 0; minified the positioning errors, so that it would act responsive.
+  right: 0;
+  bottom: 0;
+  left: 0;*/
+/*  margin: 0 auto;*/
+/*  clear: both;*/
+    height: 100%;
+/*    width: 100%;*/
+}
+.container {
+    height: 30%;
+    width: 100%;
+    position: relative;
+    background-color:transparent !important; 
+}
+</style>
  <body>
 	<header class="main" id="discover">
 		<div class="overlay"></div>
@@ -26,31 +127,114 @@
 	<div class="container">
 		<p style="font-size: 1.3em;"><b><span style="font-size: 1.5em; color: #5DBCD2;"> Discover </span></b>  </p>
 		
+  <!-- City search -->
+    <form class="navbar-form" id="nameStart">
+        <input class="form-control" id="cityInput" placeholder="City" type="text">
+        <button type="submit" id="searchButton" class="btn btn-default">Search</button>
+    </form>
+    <br><br>
+<!--     <div id="output"></div> -->
 
-		<div class="discover-row">
+		<div id="output" class="container">
+		<br><br>
+		</div>
+	
+<!-- <div class="discover-row">
 			<div class="col-flex">
 				<span id="jfk"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1000&photoreference=CmRaAAAAeZI76fQ4MtNNwEUoSK5_Yzsnqi94OHa5RRZNNvBa8hUtbj6-ERrZrwPQ1PB5tKJryAYLgVeXV-fsEC74_biEM7qgHKeLhtDPnz_Uzg24CLiDciwd7IoYN8jIMXf2Xp0JEhBxb8hu98rEFG014BN5pMaFGhRLQGKegWVw19q0dFU1T31DNufAwg&key=AIzaSyAy0tGj8xyO9xD8vvnbdq4398PYN05jhLc"></span>
 			</div>
 			<div class="col-flex">
-				<span id=""><img src="https://maps.googleapis.com/maps/api/place/photo?maxheight=700&photoreference=CmRaAAAAUm4opBpUTaTs2iLsg20h_iWv0BXQwP0H6RceHIGtEk8K8CmUE0ExaLpy0ROjsO-kkQ4aK9AP6aINMq2HoA9nk6FivPd7ikNSS8Pyr5OSMPFNTNrCD5SfDLrmVXLM0f7HEhCF--OPGI_gY4GYPWCI-wzpGhQxZkLlCmRWNM5jE85EzJt_OEM2zg&key=AIzaSyAy0tGj8xyO9xD8vvnbdq4398PYN05jhLc"></span>
+				<span id=""><img src="https://maps.googleapis.com/maps/api/place/photo?maxheight=700&photoreference=CmRaAAAAUm4opBpUTaTs2iLsg20h_iWv0BXQwP0H6RceHIGtEk8K8CmUE0ExaLpy0ROjsO-kkQ4aK9AP6aINMq2HoA9nk6FivPd7ikNSS8Pyr5OSMPFNTNrCD5SfDLrmVXLM0f7HEhCFOPGI_gY4GYPWCI-wzpGhQxZkLlCmRWNM5jE85EzJt_OEM2zg&key=AIzaSyAy0tGj8xyO9xD8vvnbdq4398PYN05jhLc"></span>
 			</div>
 			<div class="col-flex">
 				<span id=""><img src="https://maps.googleapis.com/maps/api/place/photo?maxheight=700&photoreference=CmRaAAAARN7fDMbdljJvSm51ASFyMn91xDfp6ybn501002E0qzoVo9XTV8spfFHMVMG5rCjIpehHetE_3n2vIs4YyWGPkYuAnYMmtjXY5OzILSnrQG4wrIV-Z8oRg8hpqB6hYsgnEhD0CFWlsjUtKPPZ7BvjBtRuGhSiqhFjCH3P7Q3M6xnkmYXLWvX9pQ&key=AIzaSyAy0tGj8xyO9xD8vvnbdq4398PYN05jhLc"></span> 
 			</div>
 		</div>
-
-
-		<div class="discover-row">
+ -->
+	<!-- 	<div class="discover-row">
 			<div class="col-flex">
-				<img src="http://via.placeholder.com/1000x700">
+				<span id="jfk"><img src="https://maps.googleapis.com/maps/api/place/photo?maxwidth=1000&photoreference=CmRaAAAAeZI76fQ4MtNNwEUoSK5_Yzsnqi94OHa5RRZNNvBa8hUtbj6-ERrZrwPQ1PB5tKJryAYLgVeXV-fsEC74_biEM7qgHKeLhtDPnz_Uzg24CLiDciwd7IoYN8jIMXf2Xp0JEhBxb8hu98rEFG014BN5pMaFGhRLQGKegWVw19q0dFU1T31DNufAwg&key=AIzaSyAy0tGj8xyO9xD8vvnbdq4398PYN05jhLc"></span>
 			</div>
 			<div class="col-flex">
-				<img src="http://via.placeholder.com/1000x700">
+				<span id=""><img src="https://maps.googleapis.com/maps/api/place/photo?maxheight=700&photoreference=CmRaAAAAUm4opBpUTaTs2iLsg20h_iWv0BXQwP0H6RceHIGtEk8K8CmUE0ExaLpy0ROjsO-kkQ4aK9AP6aINMq2HoA9nk6FivPd7ikNSS8Pyr5OSMPFNTNrCD5SfDLrmVXLM0f7HEhCFOPGI_gY4GYPWCI-wzpGhQxZkLlCmRWNM5jE85EzJt_OEM2zg&key=AIzaSyAy0tGj8xyO9xD8vvnbdq4398PYN05jhLc"></span>
 			</div>
 			<div class="col-flex">
-				<img src="http://via.placeholder.com/1000x700"> 
+				<span id=""><img src="https://maps.googleapis.com/maps/api/place/photo?maxheight=700&photoreference=CmRaAAAARN7fDMbdljJvSm51ASFyMn91xDfp6ybn501002E0qzoVo9XTV8spfFHMVMG5rCjIpehHetE_3n2vIs4YyWGPkYuAnYMmtjXY5OzILSnrQG4wrIV-Z8oRg8hpqB6hYsgnEhD0CFWlsjUtKPPZ7BvjBtRuGhSiqhFjCH3P7Q3M6xnkmYXLWvX9pQ&key=AIzaSyAy0tGj8xyO9xD8vvnbdq4398PYN05jhLc"></span> 
 			</div>
 		</div>
+ -->
+
 
 	</div>
+
+	<!-- <script type="text/javascript">
+// A $( document ).ready() block.
+$( document ).ready(function() {
+    console.log( "ready!" );
+
+    var cityName = "miami";
+    var imageArray = [];
+
+    // on click function
+    // $("#searchButton").on("click" , function(event) {
+    	$(window).load(function() {
+        event.preventDefault();
+        // take value from input name
+        // cityName = $("#cityInput").val().trim();
+        cityName.val().trim();
+        // Getty image apikey
+        var apiKey = 'wswp79k7g9ha22qggnjkpdm9';
+        // Getty image ajax call
+        $.ajax({
+            type:'GET',
+            url:"https://api.gettyimages.com/v3/search/images/creative?phrase=miami&"
+            beforeSend: function (request) {
+            request.setRequestHeader("Api-Key", apiKey);
+        }}).done(function(data) {
+
+            console.log("Ran ajax success");
+            // loop through the first 10 images on Getty images
+            for(var i = 0; i < 10; i++) {
+                // push 10 imges into array
+                imageArray.push(data.images[i].display_sizes[0].uri);
+            }
+
+            console.log(imageArray);
+            var i = 0;
+            // set loop for X seconds
+            var int = self.setInterval(changeImg, 1000 * 3);
+            // displays images in DOM and increments i
+            function changeImg() {
+                $("#output").html("<img src='" + data.images[i].display_sizes[0].uri + "'/>");
+                i++;
+            }
+        })
+    })
+  });
+</script> -->
+
+<script "text/javascript">
+//Search for images with an api key and show the output
+var apiKey = 'd6e3snbs3ch2qvk8wctwnjmc';
+
+$.ajax(
+    {
+        type:'GET',
+        url:"https://api.gettyimages.com/v3/search/images/creative?phrase=miami",
+         beforeSend: function (request)
+            {
+                request.setRequestHeader("Api-Key", apiKey);
+            }})
+    .done(function(data){
+        console.log("Success with data")
+        for(var i = 0;i<data.images.length;i++)
+        {
+           $("#output").append("<img src='" + data.images[i].display_sizes[0].uri + "'/>");
+           // console.log(data.display_sizes);
+        }
+    })
+    .fail(function(data){
+        alert(JSON.stringify(data,2))
+    });
+    </script>
 </body>
