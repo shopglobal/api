@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Travel Smart</title>
+    <!--Link to reset css template -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <!--====== BOOTSTRAP ===== -->
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <!-- Firebase Reference -->
+    <!-- <script src="https://www.gstatic.com/firebasejs/live/3.0/firebase.js"></script> -->
+    <!--====== FONTS ===== -->
+    <!--Import Google Icon Font-->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,300' rel='stylesheet' type='text/css'>
+    <!-- Font Awesome link which enable fonts and icons.  -->
+    <script src="https://use.fontawesome.com/9763ef17ba.js"></script>
+    <!--====== YOUR STYLE SHEET ===== -->
+    <!-- Your style sheet link -->    
+    <!-- <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/base/jquery-ui.css">  -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <!--Datatables CSS - Mark -->
+    <link rel="stylesheet" href="assets/css/datatables.css">
+
+    <link rel="stylesheet" href="assets/css/jquery.modal.css" type="text/css" media="screen" />
+</head>
+<body>
+     <!--====== HTML CONTENT ===== -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand">Travel Smart</a>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+      </li>
+       <li class="nav-item">
+        <a class="nav-link" href="beta.html">Plan</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="about.html">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="signup.html">Sign Up</a>
+      </li>
+    </ul>    
+    </div>
+    </nav>
+    
+    <!-- Search Bar -->
+    <div class="wrap wrap-search">  
+        <div class="box">
+            <div class="login">
+                <div class="brand">
+                    <h1>Here We Go!<i class="fa fa-paper-plane"></i></h1>
+                </div>
+                <div class="inputs">
+                    <p>Where do you want to go?</p>
+                    <input id="where" type="text" class="input where">
+                    <!-- <p>When do you want to get there?</p>
+                    <input id="when" type="text" class="input"> -->
+                </div>
+                <div class="buttons">
+                    <button class="submit">Let's Go!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- display search related images here -->
+    <div class="container-fluid">
+            <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12">
+                <div class="panel panel-primary">
+                    <div class="panel-heading text-center">
+                        <div class="panel-title"></div>
+                    </div>
+                    <div class="panel-body cityImage">  <!-- I changed this div because I wanted to add a go-back button  wenfang -->
+                        <img src="">
+                    </div>
+                    <!-- Place holder for About City -->
+                    <!-- <div class="panel-body cityAbout">About City</div> -->
+                    <div class="panel-body popularSrches">   <!-- added a div for popular searches  wenfang -->
+                        <h2>Popular Destinations</h2>
+                        <hr>
+                    </div>
+               
+                    <!-- Place holder for the City weather data-->
+                    <div class="panel-body cityWeather">
+                        <div id="localTimeWeather">
+                        </div>
+                        <br>
+                        <table class="table table-hover" id='weather-table'>
+                           <thead>
+                              <tr>
+                                <th>Month</th>
+                                <th>Jan</th>
+                                <th>Feb</th>
+                                <th>Mar</th>
+                                <th>Apr</th>
+                                <th>May</th>
+                                <th>Jun</th>
+                                <th>Jul</th>
+                                <th>Aug</th>
+                                <th>Sep</th>
+                                <th>Oct</th>
+                                <th>Nov</th>
+                                <th>Dec</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                             <!--  <tr>
+                                <td>Avg. Min. Temp (F)</td>
+                              </tr>
+                              <tr>
+                                <td>Abs. Max. Temp (F)</td>
+                              </tr>
+                              <tr>
+                                <td>Avg. Daily Rainfall (in)</td>
+                              </tr> -->
+                           </tbody>
+                        </table>
+                    </div>
+                    
+                    <!-- <hr> -->
+                    <!-- Place holder for Things to Do -->
+                    <!-- added a header for the things-to-do title - wenfang-->
+                    <div class="panel-body cityToDo"><h2></h2></div>
+                   <!--  <div class="panel-body citySort"></div> -->
+                    <hr>
+                    <!-- Place holder for Flight info -->
+                     <!-- Place holder for Flight info -->
+                    <div class="panel-body cityFlight">Flight Info
+                    <table class="table tablesorter">  
+                        <thead class="thead">
+                        <tr>
+                        <th class="thead tablesorter">Origin</th>
+                        <th class="thead tablesorter">Destination</th>
+                        <th class="thead tablesorter">Departure</th>
+                        <th class="thead tablesorter">Return</th>
+                        <th class="thead tablesorter">Price</th>
+                        </tr>
+                        </thead>
+                    <tbody >
+                        <tr class="tr" id="results">
+                        <td class="td"><span id="origins" class="tablesorter"></span></td>
+                        <td class="td"><span id="destinations" class="origin tablesorter" value="0"></span></td>
+                        <td class="td"><span id="departure_date" class="tablesorter"></span></td>
+                        <td class="td" id="td"><span id="return_date" class="tablesorter"></span></td>
+                        <td class="td" id="td"><span id="price" class="tablesorter"></span></td>
+
+
+                        </tr>
+                    </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </div>
+            
+
+    <!-- DatatablesJS | Mark -->
+    <script src="assets/javascript/datatables.js"></script>
+    <!-- MomenJS CDN | Mark-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.js"></script>
+
+    <script src="assets/javascript/jquery.modal.js" type="text/javascript" charset="utf-8"></script>
+    <!-- Amadeus API JS -->
+ <!--    <script src="assets/javascript/amadeus.js"></script> -->
+
+    <!-- Added Jquery UI Libraries wenfang -->
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!--====== UNDERSCORE===== -->
+    <!-- underscore JS library CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+
+    <!-- ===== FIREBASE ====== -->
+    <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
+    <!--====== YOUR LOCAL JS FILE ===== -->
+    <!-- link to user JS file. Name will change -->
+    <script type="text/javascript" src="assets/javascript/app.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
+    <!-- <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"></script> -->
+
+</body>
+
+</html>
