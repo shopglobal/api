@@ -1,0 +1,25 @@
+{
+  "name": "liri-node-app",
+  "version": "1.0.0",
+  "description": "Grabs data from the Twitter Spodify OMDB apis",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ciarram/liri-node-app.git"
+  },
+  "author": "Ciarra Murphy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ciarram/liri-node-app/issues"
+  },
+  "homepage": "https://github.com/ciarram/liri-node-app#readme",
+  "dependencies": {
+    "liri": "^1.0.1",
+    "node-spotify-api": "^1.0.7",
+    "request": "^2.82.0",
+    "twitter": "^1.7.1"
+  }
+}
